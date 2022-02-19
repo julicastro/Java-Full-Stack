@@ -7,6 +7,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import com.encuesta.annotations.UniqueEmail;
+
 @Data
 public class UserRegisterRequestModel {
 
@@ -15,6 +17,7 @@ public class UserRegisterRequestModel {
 
     @NotEmpty
     @Email
+    @UniqueEmail
     private String email;
 
     @NotEmpty
